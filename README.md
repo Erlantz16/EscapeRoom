@@ -1,71 +1,72 @@
 # Escape Room: CITT Txurdinaga
 
-Txurdinagako Telekomunikazio Zientziaren Inteligentzia Zentroan (CITT), mezu ezezagun bat jaso dugu, eta
-momentu honetan, mezuaren zati bat ezagutzeko lortu dugu bakarrik.
+En el Centro de Inteligencia en Telecomunicaciones de Txurdinaga (CITT), hemos recibido un mensaje desconocido y,
+hasta el momento, solo hemos logrado descifrar una parte del mensaje.
 
 
-## 📑 Aurkibidea
+## 📑 Índice
 
-1. [Deskribapena](#-1.Deskribapena)
-2. [Instalazioa](#-2.Instalazioa)
-3. [Garatzaileak](#-3.Garatzaileak)
+1. [Descripción](#-1.Descripción)
+2. [Instalación](#-2.Instalación)
+
+## 1.Descripción
+
+En el Centro de Inteligencia en Telecomunicaciones de Txurdinaga (CITT), hemos recibido un mensaje desconocido y,
+hasta el momento, solo hemos logrado descifrar una parte del mensaje.
+
+Sabemos que el mensaje tiene información sobre la ubicación y orientación de antenas parabólicas, pero los parámetros
+están ausentes. Además, se nos pide enviar una configuración para obtener un ahorro de energía previo a la temperatura
+de un componente electrónico, lo que permite reducir a la mitad el consumo energético en invierno, logrando un ahorro 
+energético significativo y reduciendo el impacto ambiental.
+
+Hasta el momento, no hemos logrado identificar, controlar o adaptar el modelo de un elemento o dispositivo, pero se sabe
+que esta información puede ser almacenada y encontrada en esta herramienta que estabiliza el parámetro en estos 
+dispositivos que deben ser instalados.
+
+Como investigador de nuestro centro, deberás analizar la comunicación recibida y enviar el modelo del elemento necesario
+para mejorar el área electrónica que albergará el dispositivo que mejorará el ahorro energético.
+
+## 2.Instalación
+
+Estos son los pasos para desplegar el proyecto:
 
 
-## 1.Deskribapena
-
-Txurdinagako Telekomunikazio Zientziaren Inteligentzia Zentroan (CITT), mezu ezezagun bat jaso dugu, eta
-momentu honetan, mezuaren zati bat ezagutzeko lortu dugu bakarrik.
-
-Jakin da mezuak antena parabolikoen kokapena eta orientazioa dauzka, baina parametroak ezeztatuta daude.
-Gainera, elementu elektroniko bati energia aurreziz temperaturaigoa eskuratzeko konfigurazioa bidaltzea
-eskatzen zaigu, eta hau horrela eginik, neguan gasto energetikoa erdia gutxituz, aurrezte energetiko
-ikaragarrizkoa lortu eta ingurumenaren eragina murriztea.
-
-Momentu honetan ez da lortu elementu edo gailuaren eredua ezagutzea edo kontrolatzeko edo egokitzea,
-instalatu beharreko tresna hauetan parametro hau estabilizatzen duen elementuaren eredua, baina jakin da
-informazio hori gorde eta aurkitu daitekeela.
-
-Gure zentroko ikertzaile gisa, jasotako komunikazioa aztertu eta behar den elementuaren
-eredua bidali beharko duzu, elektronikoaren eremua hobetzeko gailua elikatuko duen tresna hura osatzeko.
-
-## 2.Instalazioa
-
-Hauek dira gure proiektua desplegatzeko pausuak:
-
-**1. pausua:** <br>
-Xampp barruan dagoen "htdocs" karpetan,sortu karpeta berri bat eta ireki Visual Studio Code-n.
-Datu basea sortu phpmyAdmin escape_room izenarekin eta importatu .sql artxiboa
-Terminal berri bat ireki  Visual Studio Code-n eta ipini komando hau:
+**Paso 1:** <br>
+Dentro de la carpeta "htdocs" de Xampp, crea una nueva carpeta y ábrela en Visual Studio Code.
+Crea una base de datos con phpMyAdmin llamada "escape_room" e importa el archivo .sql.
+Abre una nueva terminal en Visual Studio Code y ejecuta el siguiente comando:
 
 ```
 git clone https://github.com/2324-EscapeRoom-2DW3/T2-2DW3D.git
 ```
 
-**2. pausua:** <br>
-Vs code ireki, eta _CTRL + Ñ_ egin edo terminala ireki:
+**Paso 2:** <br>
+Abre Visual Studio Code, y presiona CTRL + Ñ o abre una nueva terminal:
+
 
 ```
 cd .\T2-2DW3D\escape_room\
 ```
 
-**3. pausua:** <br>
-Proiekturako gauzak deskargatu:
+**Paso 3:** <br>
+Descarga los recursos del proyecto:
+
 
 ```
 composer install
 npm install
 ```
 
-**4. pausua:** <br>
-_.env_ fitxategia sortu
+**Paso 4:** <br>
+Crea el archivo .env:
+
 
 ```
 cp .env.example .env
 ```
 
-**5. pausua:** <br>
-Email-en bidalketa eta datu-basearekin funtzionatzeko _.env_ fitxategia editatu behar da eta DB_DATABASE tokian datubasearen izena ipini beharko da edo egin copy-paste bat.
-
+**Paso 5:** <br>
+Edita el archivo .env para que los envíos de correo electrónico y la comunicación con la base de datos funcionen. En la sección DB_DATABASE, asegúrate de escribir el nombre de la base de datos o haz copiar y pegar.
 ```
 APP_NAME=Laravel
 APP_ENV=local
@@ -128,11 +129,13 @@ VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
 VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```
 
-**6. pausua:** <br>
-ADI: xampp a exekutatzen egon behar da, bai _Apache_, bai _MySQL_:
+**Paso 6:** <br>
+NOTA: Xampp debe estar ejecutándose, tanto Apache como MySQL.
 
-**7. pausua:** <br>
-Proiektua exekutatzeko
+
+**Paso 7:** <br>
+Para ejecutar el proyecto:
+
 
 ```
 cd .\T2-2DW3D\escape_room\
@@ -140,11 +143,5 @@ php artisan serve
 npm run dev
 ```
 
-## 3.Garatzaileak
-
-- **Erlantz Barriuso**
-- **Gaizka Miralles**
-- **Aimar Linaje**
-- **Javier Andia**
-
+## Erlantz Barriuso
 
