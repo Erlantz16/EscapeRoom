@@ -1,0 +1,348 @@
+@import url('https://fonts.cdnfonts.com/css/led-digital-7');
+
+#bodipositiv {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../public/images/1.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+.imagen-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.imagenbombilla {
+    width: 80px;
+}
+
+
+/* .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+} */
+
+
+.panel-led {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'LED Digital 7', sans-serif;
+    width: 250px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+.numeros {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    gap: 10px;
+}
+
+.numeros > span {
+    color: white;
+    padding-bottom: 4px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(52, 208, 255);
+}
+
+.teclado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teclado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  .tecla {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+
+/* BOTONES */
+
+.botontemp{
+  position: absolute;
+    display: flex;
+    float: right;
+    margin-left: 96%;
+    margin-top: 40%;
+}
+
+.botontemp>input{
+    width: 50px;
+    height: 100px;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.btnventana{
+  position: absolute;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 46%;
+    margin-top: 21%;
+}
+
+.btnventana>input{
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.btnreloj{
+    position: absolute;
+  
+      display: flex;
+      justify-content: center;
+      margin-left: 63%;
+      margin-top: 12%;
+  }
+  
+  .btnreloj>input{
+      width: 70px;
+      height: 70px;
+      background: transparent;
+      border: transparent;
+      cursor: pointer;
+  }
+
+  .btnEstanteria{
+    position: absolute;
+  
+      display: flex;
+      justify-content: center;
+      margin-left: 0%;
+      margin-top: 20%;
+  }
+  
+  .btnEstanteria>input{
+      width: 170px;
+      height: 50px;
+      background: transparent;
+      border: transparent;
+      cursor: pointer;
+  }
+
+  .teclado-abajo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+
+
+/* ANIMACION PARA LAS FRASES */
+@keyframes desvanecer {
+    0% {
+        opacity: 0;
+    }
+    25%{
+        opacity: .5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.centrarfrases {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.frases{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.animacionfrases{
+    animation: desvanecer 5s forwards;
+}
+
+/* PARPADEO */
+
+@keyframes parpadeo {
+    0%, 50%, 100% {
+        -webkit-text-stroke-color: rgb(52, 208, 255);
+    }
+    25% {
+        -webkit-text-stroke-color: rgb(255, 0, 0);
+    }
+}
+
+.parpadeo {
+    animation: parpadeo 1s infinite;
+}
+
+/* body.swal2-height-auto {
+  height: unset !important;
+} */
+
+.confirmation-box {
+    display: none;
+    width: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* z-index: 2; */
+    border-radius: 10px;
+
+    /* Añadir estas propiedades para centrar vertical y horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirmation-box-si {
+    display: block;
+    width: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    border-radius: 10px;
+    /* filter: blur(10px); */
+
+    /* Añadir estas propiedades para centrar vertical y horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#confirmation-box h2 {
+    margin-bottom: 20px;
+
+}
+
+#confirmation-box button {
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#yes-button {
+    width: 50px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#no-button {
+    width: 50px;
+    height: 30px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* .blur-body{
+    backdrop-filter: blur(10px);
+} */
+
+.blur-effect {
+    filter: blur(10px);
+}
+
+.EldivDelapistaNone{
+    display: none;
+    width: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.EldivDelapistaVisible{
+    display: block;
+    width: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ContenidoPista {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Puedes ajustar el valor según tus preferencias */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+}
